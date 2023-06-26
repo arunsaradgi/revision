@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <p>Hello I am Arun</p>
+
+    <form>
+      <input type="text" />
+      <select name="name" id="">
+        <option value="arun">arun</option>
+        <option value="abhi">abhi</option>
+      </select>
+      <textarea name="mad" id="asdf" cols="30" rows="10">asdfasdf</textarea>
+      <button id="button">press</button>
+      <label for="input"></label>
+      <input type="text" value="mad" />
+      <fieldset>
+        <legend>Choose your favorite monster</legend>
+
+        <input type="radio" id="kraken" name="monster" value="K" />
+        <label for="kraken">Kraken</label><br />
+
+        <input type="radio" id="sasquatch" name="monster" value="S" />
+        <label for="sasquatch">Sasquatch</label><br />
+
+        <input type="radio" id="mothman" name="monster" value="M" />
+        <label for="mothman">Mothman</label>
+      </fieldset>
+    </form>
+    <form>
+      <input type="text" />
+      <select name="name" id="">
+        <option value="arun">arun</option>
+        <option value="abhi">abhi</option>
+      </select>
+      <textarea name="mad" id="asdf" cols="30" rows="10">asdfasdf</textarea>
+      <button id="button">press</button>
+      <label for="input"></label>
+      <input type="text" value="mad" />
+      <fieldset>
+        <legend>Choose your favorite monster</legend>
+
+        <input type="radio" id="kraken" name="monster" value="K" />
+        <label for="kraken">Kraken</label><br />
+
+        <input type="radio" id="sasquatch" name="monster" value="S" />
+        <label for="sasquatch">Sasquatch</label><br />
+
+        <input type="radio" id="mothman" name="monster" value="M" />
+        <label for="mothman">Mothman</label>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
+<script>
+  window.onload = function () {
+    console.log("Page loaded");
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  function handleScroll() {
+    console.log("User scrolled");
+  }
+
+  const button = document.getElementById("button");
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("handleClicked by Arun");
+  };
+
+  button.addEventListener("click", handleClick);
+
+  // console.log(navigator.geolocation);
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+  function successCallback(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    console.log("Latitude:", latitude);
+    console.log("Longitude:", longitude);
+  }
+
+  function errorCallback(error) {
+    console.error("Error retrieving location:", error);
+  }
+
+  if (navigator.onLine) {
+    console.log("onLine called");
+  } else {
+    console.lgo("User is offline");
+  }
+</script>
