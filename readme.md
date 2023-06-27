@@ -134,7 +134,7 @@ In HTML, the following elements have specific meanings and purposes:
 
 These semantic HTML elements provide a clearer structure to your web pages, making it easier for search engines, assistive technologies, and developers to understand the purpose and relationships between different parts of the content. They also contribute to better accessibility and maintainability of the code.
 
-==================================================================================================================================
+---
 
 `What are forms in HTML?`
 
@@ -158,7 +158,7 @@ These are just a few examples of form elements in HTML. Forms can be customized 
 
 Forms play a crucial role in gathering user input and enabling interactivity in web applications. They provide a way to collect, validate, and transmit data, making them an essential component of most web-based systems.
 
-===============================================================================================================================
+---
 
 `What are event listeners in HTML?`
 
@@ -196,7 +196,7 @@ In this example, when the button is clicked, the `handleClick` function is execu
 
 Event listeners provide a way to make web pages interactive and responsive to user actions. By listening for and responding to specific events, you can create dynamic and engaging experiences for users.
 
-==========================================================================================================================================
+---
 
 `what is onload event?`
 
@@ -225,7 +225,7 @@ In this case, the `onload` event is directly defined in the HTML tag of the `img
 
 The `onload` event is useful for scenarios where you need to ensure that all the content and resources on a page have loaded before executing certain actions or manipulating elements. It allows you to create smoother user experiences and perform tasks that rely on the availability of specific resources.
 
-========================================================================================================================================
+---
 
 `What is scroll event?`
 
@@ -268,7 +268,7 @@ You can also attach the `scroll` event to specific scrollable elements within th
 
 By utilizing the `scroll` event, you can implement various scrolling effects, lazy loading of content as the user scrolls, parallax effects, sticky headers, and more. It provides a way to create dynamic and engaging experiences based on the user's scrolling behavior.
 
-========================================================================================================================================
+---
 
 `How do you use Geo Location API?`
 
@@ -334,7 +334,7 @@ It's important to note that retrieving the user's location may require the user'
 
 By using the Geolocation API, you can obtain the latitude and longitude coordinates of the user's current location. With this information, you can build location-aware applications, display maps, calculate distances, provide localized content, and more.
 
-=========================================================================================================================================
+---
 
 `How do you know if a user is offline or not? What API does the browser provide for that?`
 
@@ -371,6 +371,60 @@ function handleOffline() {
 
 By utilizing the `navigator.onLine` property and the `online` and `offline` events, you can detect the user's network status and implement appropriate behavior in your web applications based on their online or offline state.
 
-=========================================================================================================================================
+---
 
 `How do you use Video and Audio tags?`
+
+To use the `<video>` and `<audio>` tags in HTML, you can follow these steps:
+
+1. Specify the source: First, you need to define the source of the video or audio content. You can do this using the `src` attribute within the respective tag.
+
+For example, to embed a video file, you can use the `<video>` tag and specify the video file's URL using the `src` attribute:
+
+```html
+<video src="path/to/video.mp4" controls></video>
+```
+
+Similarly, to embed an audio file, you can use the `<audio>` tag and specify the audio file's URL using the `src` attribute:
+
+```html
+<audio src="path/to/audio.mp3" controls></audio>
+```
+
+2. Controls and playback: By adding the `controls` attribute to the `<video>` or `<audio>` tag, you enable default playback controls for the user, such as play/pause, volume control, and timeline scrubbing.
+
+3. Additional attributes: You can customize the behavior and appearance of the video or audio player by adding additional attributes to the `<video>` or `<audio>` tag. Some commonly used attributes include:
+
+- `autoplay`: Specifies that the video or audio should automatically start playing when the page loads.
+- `loop`: Specifies that the video or audio should loop and repeat playback.
+- `poster`: Defines an image that is displayed as a placeholder before the video or audio content loads.
+
+```html
+<video
+  src="path/to/video.mp4"
+  controls
+  autoplay
+  loop
+  poster="path/to/poster.jpg"
+></video>
+
+<audio src="path/to/audio.mp3" controls autoplay loop></audio>
+```
+
+4. Multiple source formats: To support different browsers and devices, it's recommended to provide multiple source formats of the video or audio file. This is achieved by using nested `<source>` tags within the `<video>` or `<audio>` tag. Each `<source>` tag specifies a different file format and the browser will automatically choose the first supported format.
+
+```html
+<video controls>
+  <source src="path/to/video.mp4" type="video/mp4" />
+  <source src="path/to/video.webm" type="video/webm" />
+  <!-- Additional source formats if desired -->
+</video>
+
+<audio controls>
+  <source src="path/to/audio.mp3" type="audio/mpeg" />
+  <source src="path/to/audio.ogg" type="audio/ogg" />
+  <!-- Additional source formats if desired -->
+</audio>
+```
+
+By using the `<video>` and `<audio>` tags along with appropriate attributes and source formats, you can embed video and audio content in your HTML pages and provide a playback interface for users to interact with the media.
